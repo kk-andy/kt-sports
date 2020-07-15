@@ -1,0 +1,15 @@
+
+<view>
+<view>
+homehoem
+</view>
+<component1 />
+<input hidden="{{toogle}}" class="one" data-spe="100" type="text" model:value="{{one}}"></input>
+{{one}}
+<view wx:for="{{sub}}" wx:key="index"  >
+  <text>
+    {{item.qq}}
+  </text>
+</view>
+<button type="warn" bind:tap="change" >切换</button>
+</view>

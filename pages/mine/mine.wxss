@@ -1,0 +1,101 @@
+/* pages/mine/mine.wxss */
+@import "../../style/iconfont/iconfont.wxss";
+
+.boss{
+  background-color: rgb(245, 245, 245);
+}
+.ktHeader{
+  background: white;
+}
+.header{
+  width: 85%;
+  height: 500rpx;
+  margin: 0 auto;
+  margin-bottom: 30rpx;
+}
+.headerLeft{
+  width: 40%;
+  height: 500rpx;
+  float: left;
+}
+.portrait{
+  width: 250rpx;
+  height: 250rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.portrait image{
+  width: 100%;
+  height: 100%;
+}
+.headerRight{
+  width: 55%;
+  height: 500rpx;
+  float: left;
+  padding-left: 5%;
+}
+.headerRight .headerText1{
+  font-weight: bolder;
+  font-size: 45rpx;
+}
+.headerRight .headerText2{
+  font-size: 20rpx;
+  color: darkgray;
+}
+.login{
+  width: 250rpx;
+  height: 100rpx;
+  float: left;
+  margin-top: 80rpx;
+  border-radius: 50rpx;
+  background: white;
+  border: 1px solid black;
+  font-size: 35rpx;
+  line-height: 100rpx;
+}
+.func{
+  background: white;
+  margin-bottom: 30rpx;
+}
+.funcTop{
+  display: flex;
+  justify-content: space-around;
+}
+.funcTop view{
+  width: 20%;
+  height: 150rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.funcTop text{
+  font-size: 35rpx;
+}
+.ktAddress{
+  background: white;
+}
+.address{
+  width: 85%;
+  margin: 0 auto;
+}
+.addressTop{
+  height: 150rpx;
+  line-height: 150rpx;
+  font-weight: bolder;
+}
+.addressMiddle image{
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+.addressBottom{
+padding-bottom: 100rpx;
+}
+.addressBottomT1{
+  font-size: 30rpx;
+}
+.addressBottomT2{
+  font-size: 25rpx;
+  color: rgb(122, 122, 122);
+}

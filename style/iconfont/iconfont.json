@@ -1,0 +1,72 @@
+{
+  "id": "1944249",
+  "name": "kt—sports",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2418263",
+      "name": "头像",
+      "font_class": "touxiang",
+      "unicode": "e673",
+      "unicode_decimal": 58995
+    },
+    {
+      "icon_id": "3001058",
+      "name": "地址",
+      "font_class": "dizhi",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "3216505",
+      "name": "活动",
+      "font_class": "huodong",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "3216541",
+      "name": "商店",
+      "font_class": "shangdian",
+      "unicode": "e66f",
+      "unicode_decimal": 58991
+    },
+    {
+      "icon_id": "6400264",
+      "name": "订单",
+      "font_class": "weibiaoti--",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "6446311",
+      "name": "购物车",
+      "font_class": "tianchongxing-",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "8575316",
+      "name": "我的",
+      "font_class": "wode",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "10622231",
+      "name": "分类",
+      "font_class": "dilanxianxingiconyihuifu_huabanfuben",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "14560695",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    }
+  ]
+}

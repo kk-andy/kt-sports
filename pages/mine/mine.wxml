@@ -1,0 +1,53 @@
+<view class="boss">
+  <view class="ktHeader">
+    <view class="header">
+      <view class="headerLeft">
+        <view class="portrait">
+        <image src="../../assets/img/portrait.png"></image>
+        </view>
+      </view>
+      <view class="headerRight">
+        <view class="headerRightTop">
+        <text class="headerText1">制胜必需\n这里必备</text>
+        <text class="headerText2">
+        成为KT会员 解锁独享尖货
+        专属体验和个性激励等丰富福利</text>
+        <button class="login" open-type="getUserInfo" bindgetuserinfo="getUserInfo" >一键登录（授权）</button>
+        <!-- <button class="login" open-type="getUserInfo" 
+        bindgetuserinfo="getUserInfo">注册登录</button> -->
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="func">
+    <view class="funcTop">
+      <view>
+      <text class="iconfont icon-weibiaoti-- ">\n订单信息
+      </text>
+      </view>
+      <view>
+        <text class="iconfont icon-huodong">\n我的活动</text>
+      </view>
+      <view>
+        <text class="iconfont icon-tianchongxing-">\n附近商店</text>
+      </view>
+      <view>
+        <text class="iconfont icon-dizhi">\n地址簿</text>
+      </view>
+    </view>
+  </view>
+  <view class="ktAddress">
+    <view class="address">
+      <view class="addressTop">
+        <text>KT运动旗舰店</text>
+      </view> 
+      <view class="addressMiddle">
+      <image src="../../assets/img/shop.png"></image>
+      </view>
+      <view class="addressBottom">
+        <text class="addressBottomT1">KT-sports上海001\n</text>
+        <text class="addressBottomT2">上海市南京东路829号</text>
+      </view>
+    </view>
+  </view>
+</view>

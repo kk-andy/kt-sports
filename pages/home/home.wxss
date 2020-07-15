@@ -1,0 +1,6 @@
+/* utils/home/home.wxss */
+.one{
+  width: 99%;
+  height: 50px;
+  border: 1px solid black;
+}
