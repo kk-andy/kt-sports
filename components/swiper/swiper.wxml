@@ -1,0 +1,18 @@
+    <view >
+      <swiper 
+      indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}"
+      interval="{{interval}}"
+      duration="{{duration}}"
+      next-margin="80rpx"
+      previous-margin="80rpx"
+      >
+        <block wx:for="{{img}}" wx:key="*this">
+          <swiper-item>
+            <view class="imgBox">
+              <view class="img" style="background:{{item.color}}">{{item.color}}</view>
+             </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>

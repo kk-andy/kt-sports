@@ -1,2 +1,38 @@
-<!--pages/shop/shop.wxml-->
-<text>pages/shop/shop.wxml</text>
+
+<scroll-view
+scroll-y="true"
+bind:scrolltoupper="hidd"
+bindscroll="showspe"
+style="height:{{screenHeight}}"
+>
+  <Swiper></Swiper>
+ <block wx:for="[1,2,3,4,5,1,2,3,4,5,1,2,3,4,5]" wx:key="*this">
+  <view>{{item}}</view>
+ </block>
+
+
+    <!-- <view class="page-section">
+      <view class="page-section-title">
+        <text>Vertical Scroll\n纵向滚动</text>
+      </view>
+      <view class="page-section-spacing">
+        <scroll-view scroll-y="true" style="height: 300rpx;" bind:scrolltoupper="hidd">
+          <view id="demo1" style="background:red;height:300rpx">111</view>
+          <view id="demo2"  style="background:orange;height:300rpx">222</view>
+          <view id="demo3" style="background:orangered;height:300rpx">333</view>
+        </scroll-view>
+      </view>
+    </view>
+    <view class="page-section">
+      <view class="page-section-title">
+        <text>Horizontal Scroll\n横向滚动</text>
+      </view>
+      <view class="page-section-spacing">
+        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+          <view id="demo1" class="scroll-view-item_H demo-text-1"></view>
+          <view id="demo2"  class="scroll-view-item_H demo-text-2"></view>
+          <view id="demo3" class="scroll-view-item_H demo-text-3"></view>
+        </scroll-view>
+      </view>
+    </view> -->
+  </scroll-view>

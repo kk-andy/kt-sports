@@ -1,66 +1,60 @@
-// pages/shop/shop.js
+const order = ['demo1', 'demo2', 'demo3']
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+  data:{
+    screenHeight:'500px',
+    topArr:[],
+    isPullDown:true
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onShareAppMessage() {
+    return {
+      title: 'scroll-view',
+      path: 'page/component/pages/scroll-view/scroll-view'
+    }
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  hidd:function(){
+   
   },
+  showspe:function(e){
+    let arr = this.data.topArr
+    arr.push(e.detail.scrollTop);
+    arr.length>=5?arr.splice(0,arr.length-4):arr
+    console.log(this.data.isPullDown,333)
+    if(arr[arr.length-1]>arr[arr.length-2]){
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+      if(!this.data.isPullDown){
+        return false
+      }else{
+        this.setData({
+          isPullDown:false
+        })
+      }
+    }else{
+      if(this.data.isPullDown){
+        return false
+      }else{
+          this.setData({
+            isPullDown:true
+          })
+        }
+      }
+    },
+    // if(arr[arr.length-1]<arr[arr.length-2]){
+    //   if(this.data.isPullDown){
+    //     return false
+    //   }else{
+    //     this.setData({
+    //       isPullDown:false
+    //     })
+    //   }
+    // }
+    
+   
+  
+  
+  onLoad:function(){
+    this.setData({
+      screenHeight:wx.getSystemInfoSync().windowHeight+"px"
+    })
   }
 })

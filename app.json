@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/shop/shop",
     "pages/mine/mine",
     "pages/home/home",
     "pages/logs/logs",
     "pages/login/login",
-    "pages/shop/shop",
     "pages/cart/cart"
   ],
   "tabBar": {

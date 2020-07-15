@@ -1,0 +1,13 @@
+/* components/swiper/swiper.wxss */
+.swiper{
+  height: 900rpx;
+}
+.imgBox{
+  height:150px;
+}
+.img{
+  height:100%;
+  width:550rpx;
+  border-radius:30rpx;
+  text-align: center;
+}
