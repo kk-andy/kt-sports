@@ -3,7 +3,7 @@
     <view class="header">
       <view class="headerLeft">
         <view class="portrait">
-        <image src="../../assets/img/portrait.png"></image>
+        <image src="{{userInfo['avatarUrl']?userInfo['avatarUrl']:'../../assets/img/portrait.png'}}"></image>
         </view>
       </view>
       <view class="headerRight">
@@ -12,16 +12,24 @@
         <text class="headerText2">
         成为KT会员 解锁独享尖货
         专属体验和个性激励等丰富福利</text>
-        <button class="login" open-type="getUserInfo" bindgetuserinfo="getUserInfo" >一键登录（授权）</button>
-        <!-- <button class="login" open-type="getUserInfo" 
-        bindgetuserinfo="getUserInfo">注册登录</button> -->
+        <button class="login" open-type="getUserInfo" 
+        wx:if="{{!userInfo}}"
+        bindgetuserinfo="login" >一键登录（授权）</button>
+         <!-- <button class="login" 
+        wx:if="{{!userInfo}}"
+       bindtap="login">一键登录（授权）</button> -->
+        <view   wx:if="{{userInfo}}" class="name">
+          <text style="font-size:27px">欢迎回来呦\n</text>
+          <text style="font-size:25px;margin-right:10px">Dear:</text>
+          <text style="font-weight:bold" >{{userInfo.nickName}}</text>
+        </view>
         </view>
       </view>
     </view>
   </view>
   <view class="func">
     <view class="funcTop">
-      <view>
+      <view >
       <text class="iconfont icon-weibiaoti-- ">\n订单信息
       </text>
       </view>

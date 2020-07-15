@@ -1,56 +1,57 @@
 // pages/mine/mine.js
 const app = getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    userInfo:null,
   },
-  getUserInfo:function(e){
-    console.log(e.detail);
-    let urserInfo = e.detail.rawData;
-    if (urserInfo){
-        app.globalData.wxUserInfo = JSON.parse(urserInfo);
-        console.log(app.globalData.wxUserInfo)
-        app.globalData.authorized=true;
-        if (e.detail.rawData) {
+  login:function(e){
+   this.verifyLogin().then(()=>{
+      let userInfo = e.detail.userInfo
+      if (userInfo){
+          app.globalData.UserInfo = userInfo;
+          this.setData({
+            userInfo:userInfo
+          })
+      } 
+   })
+  },
+  getUserInfo:function(){
+    wx.getUserInfo({
+      success: (res) => {
+        let userInfo = res.userInfo
+        if (userInfo){
+            app.globalData.UserInfo = userInfo;
             this.setData({
-                visibleNote: 2 // 存入的状态
-            });
+              userInfo:userInfo
+            })
+        } 
+      },
+
+    })
+  },
+  verifyLogin:function(){
+    return new Promise((resolve,reject)=>{
+      wx.login({
+        success(res){
+          if(res.errMsg.split(":")[1] == 'ok'){
+            resolve(res.code)
+          }else{
+            reject()
+          }
         }
-    }
-    // wx.getSetting({
-    //   success(res) {
-    //     // console.log("res", res)
-    //     if (res.authSetting['scope.userInfo']) {
-    //       console.log("已授权=====")
-    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称
-    //       wx.getUserInfo({
-    //         success(res) {
-    //           console.log("获取用户信息成功", res)
-    //           that.setData({
-    //             name: res.userInfo.nickName
-    //           })
-    //         },
-    //         fail(res) {
-    //           console.log("获取用户信息失败", res)
-    //         }
-    //       })
-    //     } else {
-    //       console.log("未授权=====")
-    //       that.showSettingToast("请授权")
-    //     }
-    //   }
-    // })
-    
+      })
+    })
+ 
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.checkSession({
+      success: (res) => {
+        this.getUserInfo()
+      },
+    })
   },
 
   /**
@@ -71,14 +72,12 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
   },
 
   /**

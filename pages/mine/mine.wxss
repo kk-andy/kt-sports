@@ -22,11 +22,12 @@
   width: 250rpx;
   height: 250rpx;
   margin: 0 auto;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 .portrait image{
   width: 100%;
   height: 100%;
+  border-radius: 50%;
 }
 .headerRight{
   width: 55%;
@@ -52,6 +53,12 @@
   border: 1px solid black;
   font-size: 35rpx;
   line-height: 100rpx;
+}
+.headerRight .name{
+  margin-top: 30rpx;
+}
+.headerRight .name :nth-child(2){
+  font-family: web-font;
 }
 .func{
   background: white;
