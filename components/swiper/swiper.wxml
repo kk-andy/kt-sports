@@ -4,8 +4,9 @@
       autoplay="{{autoplay}}"
       interval="{{interval}}"
       duration="{{duration}}"
-      next-margin="80rpx"
-      previous-margin="80rpx"
+      next-margin="20rpx"
+      previous-margin="40rpx"
+      
       >
         <block wx:for="{{img}}" wx:key="*this">
           <swiper-item>
